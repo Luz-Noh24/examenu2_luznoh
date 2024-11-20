@@ -1,0 +1,464 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #333;
+    background-color: white;
+}
+
+.ancho {
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    background-color: #333947;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+#icono {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #333947;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    width: 35px;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+#Caja {
+    display: block;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #333947;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.slide {
+    position: relative;
+    background-color: #f8f8f8;
+    height: 500px;
+    overflow: hidden;
+}
+
+.sd-cont {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(245, 245, 245, 0.8);
+    padding: 20px;
+    max-width: 60%;
+    text-align: center;
+    color: #333;
+    z-index: 2;
+    border-radius: 8px;
+}
+
+.slide h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff4048;
+    margin-bottom: 10px;
+}
+
+.slide p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #ff4048;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.rslides {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.rslides li {
+    backface-visibility: hidden;
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.rslides li:first-child {
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.rslides img {
+    display: block;
+    height: auto;
+    float: left;
+    width: 100%;
+    border: 0;
+}
+
+#service {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+#service h2 {
+    font-size: 2.5rem;
+    color: #ff4048;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.serv-cont {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.serv-cont article {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.serv-cont article i {
+    font-size: 3rem;
+    color: #ff4048;
+    margin-bottom: 15px;
+}
+
+.serv-cont article h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.serv-cont article p {
+    font-size: 1rem;
+}
+
+.contenedor {
+    background-color: f5f5f5;
+    display: flex;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    gap: 20px;
+}
+
+.contenedor_fotos a {
+    filter: brightness(1);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.contenedor_fotos a:hover {
+    filter: brightness(0.5);
+}
+.contenedor_fotos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Crea 2 columnas de igual ancho */
+    grid-template-rows: repeat(2, 1fr); /* Crea 2 filas de igual alto */
+    gap: 30px; /* Espacio entre las fotos */
+    padding: 10px;
+}
+
+.contenedor_fotos figure {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+.contenedor_fotos figure img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Estilos para el footer */
+.footer {
+    background-color: #f5f5f5; /* Color de fondo */
+    padding: 20px 0; /* Espaciado superior e inferior */
+    text-align: center; /* Centra el texto */
+    border-top: 1px solid #ddd; /* Línea superior para separación */
+}
+
+.footer-content {
+    display: flex; /* Flexbox para alinear el contenido */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra horizontalmente */
+}
+
+.footer p {
+    margin: 10px 0; /* Espacio alrededor del párrafo */
+    color: #666; /* Color del texto */
+}
+
+.footer a {
+    color: #ff4048; /* Color del enlace */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Subraya al pasar el mouse */
+}
+
+.social-icons {
+    margin-top: 10px; /* Espacio arriba de los iconos sociales */
+}
+
+.social-icons a {
+    margin: 0 10px; /* Espaciado entre iconos */
+    color: #333; /* Color de los iconos */
+    font-size: 1.5rem; /* Tamaño de los iconos */
+    transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+.social-icons a:hover {
+    color: #ff4048; /* Cambia el color al pasar el cursor */
+}
+
+/* Botón "Volver arriba" */
+.back-to-top {
+    background-color: #ff4048; /* Color del botón */
+    color: #fff; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    font-size: 1rem; /* Tamaño de fuente */
+    margin-bottom: 10px; /* Espacio en la parte inferior */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.back-to-top:hover {
+    background-color: #ff4048; /* Color más oscuro al pasar el cursor */
+}
+conten {
+    display: flex; /* Organiza los hijos en fila */
+    gap: 20px; /* Espacio entre las secciones */
+    padding: 20px;
+}
+
+/* FAQ Section */
+.contenido_fre {
+    flex: 2; /* Ocupa más espacio que Skills */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contenido_fre h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+}
+
+.acorde {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.acor_titulo {
+    padding: 15px 20px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.acor_titulo h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.acor_titulo i {
+    font-size: 20px;
+    color: blue;
+}
+
+.acor_contenido {
+    display: none;
+    padding: 15px 20px;
+    color: #333;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+
+.acor_contenido p {
+    margin-bottom: 10px;
+}
+/* Contenedor general del carrusel */
+#carousel {
+    max-width: 1200px; /* Ancho máximo del carrusel */
+    display: flex;
+    flex-direction: column; /* Los elementos internos se apilan en columna */
+    margin: 0 auto; /* Centrado horizontal */
+    position: relative;
+  }
+  
+  /* Contenedor de las diapositivas */
+  #slide-container {
+    scroll-snap-type: x mandatory; /* Activa el "snap" al desplazarse horizontalmente */
+    overflow-x: scroll; /* Permite desplazamiento horizontal */
+    overflow-y: hidden; /* Oculta el desplazamiento vertical */
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 10px; /* Espacio entre diapositivas */
+    color: #000;
+    -webkit-overflow-scrolling: touch; /* Habilita desplazamiento suave en dispositivos táctiles */
+    scroll-behavior: smooth; /* Desplazamiento suave */
+    border: 3px black solid; /* Borde negro alrededor del contenedor de diapositivas */
+  }
+  
+  /* Contenedor externo del carrusel */
+  .ContAINE {
+    width: 1200px; /* Ancho del contenedor */
+    background: #fff; /* Fondo blanco */
+    padding: 20px;
+    border-radius: 8px; /* Bordes redondeados */
+    display: flex;
+    gap: 20px; /* Espacio entre elementos internos */
+  }
+  
+  /* Estilos de cada diapositiva */
+  .slide {
+    padding: 20px;
+    scroll-snap-align: center; /* Alinea la diapositiva en el centro del contenedor al hacer scroll */
+    position: relative;
+    min-width: 100%; /* Cada diapositiva ocupa todo el ancho del contenedor */
+    text-align: center;
+  }
+  
+  /* Estilos para las imágenes dentro de cada diapositiva */
+  .slide img {
+    width: 80%;             /* Ajusta el tamaño de la imagen al 80% del contenedor */
+    max-width: 300px;       /* Ancho máximo de la imagen */
+    max-height: 200px;      /* Altura máxima de la imagen */
+    object-fit: cover;      /* Ajusta la imagen sin deformarla */
+    margin-bottom: 10px;    /* Espacio inferior */
+    border-radius: 8px;     /* Bordes redondeados para las imágenes */
+  }
+  
+  /* Encabezado principal de la sección de perfil */
+  .perfil h2 {
+    text-align: center;
+    font-size: 2em;
+    margin: 10px 0;
+  }
+  
+  /* Subtítulo de la sección de perfil */
+  .perfil h3 {
+    color: blue; /* Color de texto azul */
+    text-align: center;
+    font-size: 2em;
+    margin: 10px 0;
+  }
+  
+  /* Descripción de la sección de perfil */
+  .perfil p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #555; /* Color de texto gris oscuro */
+  }
+  
+  /* Contenedor de los botones de navegación del carrusel */
+  .slide-buttons {
+    display: flex;
+    justify-content: center; /* Centra los botones */
+    align-items: center;
+    padding: 10px;
+  }
+  
+  /* Estilos para los botones de navegación (flechas) */
+  .arrow {
+    background-color: yellow; /* Fondo amarillo */
+    border: 1px solid black;
+    color: black; /* Texto negro */
+    text-decoration: none; /* Elimina el subrayado en enlaces */
+    cursor: pointer;
+    padding: 10px 15px; /* Espaciado interno */
+    font-size: 1.5em; /* Tamaño del texto */
+    margin: 0 5px; /* Espacio entre botones */
+    transition: background-color 0.3s; /* Transición suave al cambiar de color */
+  }
+  
+  .arrow:hover {
+    background-color: #ddd; /* Cambia el fondo al pasar el cursor */
+  }
+  
+  /* Indicadores opcionales de la diapositiva (barra de progreso) */
+  .slide-indicator {
+    display: inline-block;
+    width: 50px; /* Ancho de cada indicador */
+    height: 10px; /* Altura de cada indicador */
+    background-color: #ddd; /* Fondo gris claro */
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transición suave al cambiar de color */
+  }
+  
+  /* Cambios de color para el indicador activo y en hover */
+  .slide-indicator.active,
+  .slide-indicator:hover {
+    background-color: #aaa; /* Fondo gris oscuro */
+  }
+  

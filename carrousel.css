@@ -1,0 +1,127 @@
+/* Estilos generales del body */
+body {
+  font-family: Arial, sans-serif; /* Fuente para todo el documento */
+  display: flex; /* Centra el contenido en la pantalla */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* La altura mínima de la pantalla es el 100% de la ventana de visualización */
+  margin: 0;
+  background-color: #f4f4f4; /* Color de fondo */
+}
+
+/* Contenedor general del carrusel */
+#carousel {
+  max-width: 1200px; /* Ancho máximo del carrusel */
+  display: flex;
+  flex-direction: column; /* Los elementos internos se apilan en columna */
+  margin: 0 auto; /* Centrado horizontal */
+  position: relative;
+}
+
+/* Contenedor de las diapositivas */
+#slide-container {
+  scroll-snap-type: x mandatory; /* Activa el "snap" al desplazarse horizontalmente */
+  overflow-x: scroll; /* Permite desplazamiento horizontal */
+  overflow-y: hidden; /* Oculta el desplazamiento vertical */
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 10px; /* Espacio entre diapositivas */
+  color: #000;
+  -webkit-overflow-scrolling: touch; /* Habilita desplazamiento suave en dispositivos táctiles */
+  scroll-behavior: smooth; /* Desplazamiento suave */
+  border: 3px black solid; /* Borde negro alrededor del contenedor de diapositivas */
+}
+
+/* Contenedor externo del carrusel */
+.Contenedor {
+  width: 1200px; /* Ancho del contenedor */
+  background: #fff; /* Fondo blanco */
+  padding: 20px;
+  border-radius: 8px; /* Bordes redondeados */
+  display: flex;
+  gap: 20px; /* Espacio entre elementos internos */
+}
+
+/* Estilos de cada diapositiva */
+.slide {
+  padding: 20px;
+  scroll-snap-align: center; /* Alinea la diapositiva en el centro del contenedor al hacer scroll */
+  position: relative;
+  min-width: 100%; /* Cada diapositiva ocupa todo el ancho del contenedor */
+  text-align: center;
+}
+
+/* Estilos para las imágenes dentro de cada diapositiva */
+.slide img {
+  width: 80%;             /* Ajusta el tamaño de la imagen al 80% del contenedor */
+  max-width: 300px;       /* Ancho máximo de la imagen */
+  max-height: 200px;      /* Altura máxima de la imagen */
+  object-fit: cover;      /* Ajusta la imagen sin deformarla */
+  margin-bottom: 10px;    /* Espacio inferior */
+  border-radius: 8px;     /* Bordes redondeados para las imágenes */
+}
+
+/* Encabezado principal de la sección de perfil */
+.perfil h2 {
+  text-align: center;
+  font-size: 2em;
+  margin: 10px 0;
+}
+
+/* Subtítulo de la sección de perfil */
+.perfil h3 {
+  color: blue; /* Color de texto azul */
+  text-align: center;
+  font-size: 2em;
+  margin: 10px 0;
+}
+
+/* Descripción de la sección de perfil */
+.perfil p {
+  text-align: center;
+  font-size: 1.2em;
+  color: #555; /* Color de texto gris oscuro */
+}
+
+/* Contenedor de los botones de navegación del carrusel */
+.slide-buttons {
+  display: flex;
+  justify-content: center; /* Centra los botones */
+  align-items: center;
+  padding: 10px;
+}
+
+/* Estilos para los botones de navegación (flechas) */
+.arrow {
+  background-color: yellow; /* Fondo amarillo */
+  border: 1px solid black;
+  color: black; /* Texto negro */
+  text-decoration: none; /* Elimina el subrayado en enlaces */
+  cursor: pointer;
+  padding: 10px 15px; /* Espaciado interno */
+  font-size: 1.5em; /* Tamaño del texto */
+  margin: 0 5px; /* Espacio entre botones */
+  transition: background-color 0.3s; /* Transición suave al cambiar de color */
+}
+
+.arrow:hover {
+  background-color: #ddd; /* Cambia el fondo al pasar el cursor */
+}
+
+/* Indicadores opcionales de la diapositiva (barra de progreso) */
+.slide-indicator {
+  display: inline-block;
+  width: 50px; /* Ancho de cada indicador */
+  height: 10px; /* Altura de cada indicador */
+  background-color: #ddd; /* Fondo gris claro */
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Transición suave al cambiar de color */
+}
+
+/* Cambios de color para el indicador activo y en hover */
+.slide-indicator.active,
+.slide-indicator:hover {
+  background-color: #aaa; /* Fondo gris oscuro */
+}
